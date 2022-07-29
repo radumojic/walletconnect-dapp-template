@@ -33,7 +33,7 @@ export const UnlockRoute: () => JSX.Element = () => (
           />
           <WalletConnectLoginButton
             callbackRoute={routeNames.dashboard}
-            loginButtonText={'MaiarV2'}
+            loginButtonText={'Maiar V2'}
             isWalletConnectV2={true}
           />
         </div>
