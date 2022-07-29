@@ -1,5 +1,8 @@
 import * as React from 'react';
 import Actions from './Actions';
+import MultipleTx from './MultipleTx';
+import SignMessage from './SignMessage';
+import SingleTx from './SingleTx';
 import TopInfo from './TopInfo';
 import Transactions from './Transactions';
 
@@ -13,7 +16,12 @@ const Dashboard = () => {
               <div className='card rounded border-0 bg-primary'>
                 <div className='card-body text-center p-4'>
                   <TopInfo />
-                  <Actions />
+                  <div className='d-flex align-items-center justify-content-center'>
+                    <SingleTx />
+                    <MultipleTx />
+                    <SignMessage />
+                    <Actions />
+                  </div>
                 </div>
               </div>
               <Transactions />

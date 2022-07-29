@@ -48,11 +48,7 @@ const Transactions = () => {
     <TransactionsList transactions={transactions} />
   ) : (
     <div className='my-5'>
-      <PageState
-        icon={faExchangeAlt}
-        className='text-muted fa-3x'
-        title='No Transactions'
-      />
+      <PageState icon={faExchangeAlt} title='No Transactions' />
     </div>
   );
 };

@@ -14,13 +14,20 @@ import routes from 'routes';
 import UnlockPage from './pages/UnlockPage';
 
 const environment = 'devnet';
+const walletConnectV2ProjectId = process.env.REACT_APP_PROJECT_ID;
+const walletConnectV2RelayAddresses = [process.env.REACT_APP_RELAY_URL];
 
 const App = () => {
   return (
     <Router>
       <DappProvider
         environment={environment}
-        customNetworkConfig={{ name: 'customConfig', apiTimeout: 6000 }}
+        customNetworkConfig={{
+          name: 'customConfig',
+          apiTimeout: 6000,
+          walletConnectV2ProjectId,
+          walletConnectV2RelayAddresses
+        }}
       >
         <Layout>
           <TransactionsToastList />
