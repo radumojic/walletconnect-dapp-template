@@ -16,6 +16,7 @@ const Transaction = () => {
     <PageState
       icon={faCheck}
       iconClass='fa-3x text-success'
+      className='dapp-icon icon-medium'
       title='Transaction submitted successfully'
       description={
         <>
@@ -41,6 +42,7 @@ const Transaction = () => {
     <PageState
       icon={faTimes}
       iconClass='fa-3x text-danger'
+      className='dapp-icon icon-medium'
       title='Error sending transaction'
       description={
         <>
