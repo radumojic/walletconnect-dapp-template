@@ -15,7 +15,11 @@ import axios from 'axios';
 
 import Actions from './Actions';
 import styles from './dashboard.module.scss';
+import MultipleTx from './MultipleTx';
+import SignMessage from './SignMessage';
+import SingleTx from './SingleTx';
 import TopInfo from './TopInfo';
+import WalletConnectPing from './WalletConnectPing';
 
 interface TransactionsFetchType {
   data: ServerTransactionType[];
@@ -83,7 +87,13 @@ const Dashboard = () => {
               <div className='card border-0 bg-primary'>
                 <div className='card-body text-center p-4'>
                   <TopInfo />
-                  <Actions />
+                  <div className='d-flex align-items-center justify-content-center'>
+                    <SingleTx />
+                    <MultipleTx />
+                    <SignMessage />
+                    <Actions />
+                    <WalletConnectPing />
+                  </div>
                 </div>
               </div>
             </div>
