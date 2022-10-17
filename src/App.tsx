@@ -9,13 +9,14 @@ import { DappProvider } from '@elrondnetwork/dapp-core/wrappers';
 
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Layout from 'components/Layout';
-import { walletConnectV2ProjectId } from 'config';
 import PageNotFound from 'pages/PageNotFound';
 import { routeNames } from 'routes';
 import routes from 'routes';
 import UnlockPage from './pages/UnlockPage';
 
 const environment = EnvironmentsEnum.devnet;
+const walletConnectV2ProjectId = process.env.REACT_APP_PROJECT_ID;
+const walletConnectV2RelayAddresses = [process.env.REACT_APP_RELAY_URL];
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
         customNetworkConfig={{
           name: 'customConfig',
           apiTimeout: 6000,
-          walletConnectV2ProjectId
+          walletConnectV2ProjectId,
+          walletConnectV2RelayAddresses
         }}
       >
         <Layout>
