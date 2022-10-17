@@ -90,7 +90,7 @@ const Dashboard = () => {
                     <SingleTx />
                     <MultipleTx />
                     <SignMessage />
-                    <Actions />                    
+                    <Actions />
                   </div>
                 </div>
               </div>
