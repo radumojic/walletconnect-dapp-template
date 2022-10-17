@@ -7,8 +7,8 @@ const WalletConnectPing = () => {
   const { provider } = useGetAccountProvider();
 
   const pingWalletConnect = async () => {
-    const response = await provider?.ping();
-    alert(response);
+    // const response = await provider?.ping();
+    // alert(response);
   };
 
   return (
