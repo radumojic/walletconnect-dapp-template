@@ -19,6 +19,7 @@ import MultipleTx from './MultipleTx';
 import SignMessage from './SignMessage';
 import SingleTx from './SingleTx';
 import TopInfo from './TopInfo';
+import WalletConnectPing from './WalletConnectPing';
 
 interface TransactionsFetchType {
   data: ServerTransactionType[];
@@ -91,6 +92,7 @@ const Dashboard = () => {
                     <MultipleTx />
                     <SignMessage />
                     <Actions />
+                    <WalletConnectPing />
                   </div>
                 </div>
               </div>
