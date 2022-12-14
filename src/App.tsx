@@ -17,6 +17,7 @@ import UnlockPage from './pages/UnlockPage';
 const environment = EnvironmentsEnum.devnet;
 const walletConnectV2ProjectId = process.env.REACT_APP_PROJECT_ID;
 const walletConnectV2RelayAddresses = [process.env.REACT_APP_RELAY_URL];
+const walletConnectDeepLink = process.env.REACT_APP_DEEPLINK_URL ?? '';
 
 const App = () => {
   return (
@@ -27,7 +28,8 @@ const App = () => {
           name: 'customConfig',
           apiTimeout: 6000,
           walletConnectV2ProjectId,
-          walletConnectV2RelayAddresses
+          walletConnectV2RelayAddresses,
+          walletConnectDeepLink
         }}
       >
         <Layout>
