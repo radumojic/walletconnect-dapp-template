@@ -1,20 +1,20 @@
 import React from 'react';
-import { useGetAccountInfo } from '@elrondnetwork/dapp-core/hooks';
+import { useGetIsLoggedIn } from '@elrondnetwork/dapp-core/hooks';
 import { logout } from '@elrondnetwork/dapp-core/utils';
+import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Navbar as BsNavbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { dAppName } from 'config';
 import { routeNames } from 'routes';
 import { ReactComponent as ElrondLogo } from './../../../assets/img/elrond.svg';
 
-const Navbar = () => {
-  const { address } = useGetAccountInfo();
+export const Navbar = () => {
+  const isLoggedIn = useGetIsLoggedIn();
 
   const handleLogout = () => {
     logout(`${window.location.origin}/unlock`);
   };
-
-  const isLoggedIn = Boolean(address);
 
   return (
     <BsNavbar className='bg-white border-bottom px-4 py-3'>
@@ -29,16 +29,24 @@ const Navbar = () => {
 
         <Nav className='ml-auto'>
           {isLoggedIn && (
-            <NavItem>
-              <button className='btn btn-link' onClick={handleLogout}>
-                Close
-              </button>
-            </NavItem>
+            <>
+              <NavItem>
+                <Link to={routeNames.statistics} className='nav-link'>
+                  <FontAwesomeIcon
+                    icon={faChartSimple}
+                    className='text-muted'
+                  />
+                </Link>
+              </NavItem>
+              <NavItem>
+                <button className='btn btn-link' onClick={handleLogout}>
+                  Close
+                </button>
+              </NavItem>
+            </>
           )}
         </Nav>
       </div>
     </BsNavbar>
   );
 };
-
-export default Navbar;

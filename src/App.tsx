@@ -5,52 +5,57 @@ import {
   SignTransactionsModals,
   NotificationModal
 } from '@elrondnetwork/dapp-core/UI';
-import { DappProvider } from '@elrondnetwork/dapp-core/wrappers';
+import {
+  DappProvider,
+  AxiosInterceptorContext // using this is optional
+} from '@elrondnetwork/dapp-core/wrappers';
 
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
-import Layout from 'components/Layout';
-import PageNotFound from 'pages/PageNotFound';
+import { Layout } from 'components';
+import {
+  apiTimeout,
+  walletConnectV2ProjectId,
+  sampleAuthenticatedDomains
+} from 'config';
+import { PageNotFound, Unlock } from 'pages';
 import { routeNames } from 'routes';
-import routes from 'routes';
-import UnlockPage from './pages/UnlockPage';
+import { routes } from 'routes';
 
-const environment = EnvironmentsEnum.devnet;
-const walletConnectV2ProjectId = process.env.REACT_APP_PROJECT_ID;
-const walletConnectV2RelayAddresses = [process.env.REACT_APP_RELAY_URL];
-const walletConnectDeepLink = process.env.REACT_APP_DEEPLINK_URL ?? '';
-
-const App = () => {
+export const App = () => {
   return (
-    <Router>
-      <DappProvider
-        environment={environment}
-        customNetworkConfig={{
-          name: 'customConfig',
-          apiTimeout: 6000,
-          walletConnectV2ProjectId,
-          walletConnectV2RelayAddresses,
-          walletConnectDeepLink
-        }}
+    <AxiosInterceptorContext.Provider>
+      <AxiosInterceptorContext.Interceptor
+        authenticatedDomanis={sampleAuthenticatedDomains}
       >
-        <Layout>
-          <TransactionsToastList />
-          <NotificationModal />
-          <SignTransactionsModals className='custom-class-for-modals' />
-          <Routes>
-            <Route path={routeNames.unlock} element={<UnlockPage />} />
-            {routes.map((route: any, index: number) => (
-              <Route
-                path={route.path}
-                key={'route-key-' + index}
-                element={<route.component />}
-              />
-            ))}
-            <Route path='*' element={<PageNotFound />} />
-          </Routes>
-        </Layout>
-      </DappProvider>
-    </Router>
+        <Router>
+          <DappProvider
+            environment={EnvironmentsEnum.devnet}
+            customNetworkConfig={{
+              name: 'customConfig',
+              apiTimeout,
+              walletConnectV2ProjectId
+            }}
+          >
+            <Layout>
+              <AxiosInterceptorContext.Listener />
+              <TransactionsToastList />
+              <NotificationModal />
+              <SignTransactionsModals className='custom-class-for-modals' />
+              <Routes>
+                <Route path={routeNames.unlock} element={<Unlock />} />
+                {routes.map((route, index) => (
+                  <Route
+                    path={route.path}
+                    key={'route-key-' + index}
+                    element={<route.component />}
+                  />
+                ))}
+                <Route path='*' element={<PageNotFound />} />
+              </Routes>
+            </Layout>
+          </DappProvider>
+        </Router>
+      </AxiosInterceptorContext.Interceptor>
+    </AxiosInterceptorContext.Provider>
   );
 };
-
-export default App;
