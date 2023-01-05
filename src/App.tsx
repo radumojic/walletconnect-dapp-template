@@ -12,14 +12,14 @@ import {
 
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import { Layout } from 'components';
-import {
-  apiTimeout,
-  walletConnectV2ProjectId,
-  sampleAuthenticatedDomains
-} from 'config';
+import { apiTimeout, sampleAuthenticatedDomains } from 'config';
 import { PageNotFound, Unlock } from 'pages';
 import { routeNames } from 'routes';
 import { routes } from 'routes';
+
+const walletConnectV2ProjectId = process.env.REACT_APP_PROJECT_ID;
+const walletConnectV2RelayAddresses = [process.env.REACT_APP_RELAY_URL];
+const walletConnectDeepLink = process.env.REACT_APP_DEEPLINK_URL ?? '';
 
 export const App = () => {
   return (
@@ -33,7 +33,10 @@ export const App = () => {
             customNetworkConfig={{
               name: 'customConfig',
               apiTimeout,
-              walletConnectV2ProjectId
+              walletConnectV2ProjectId,
+              walletConnectV2RelayAddresses,
+              walletConnectDeepLink,
+              walletConnectV2Options: { logger: 'debug' }
             }}
           >
             <Layout>
