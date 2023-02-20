@@ -1,10 +1,9 @@
 import * as React from 'react';
-
-import { useGetAccountProvider } from '@elrondnetwork/dapp-core/hooks/account/useGetAccountProvider';
-import { getProviderType } from '@elrondnetwork/dapp-core/providers/utils';
-import { LoginMethodsEnum } from '@elrondnetwork/dapp-core/types';
 import { faTableTennis } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useGetAccountProvider } from '@multiversx/sdk-dapp/hooks/account/useGetAccountProvider';
+import { getProviderType } from '@multiversx/sdk-dapp/providers/utils';
+import { LoginMethodsEnum } from '@multiversx/sdk-dapp/types';
 
 export const WalletConnectPing = () => {
   const { provider } = useGetAccountProvider();

@@ -1,13 +1,16 @@
 import React from 'react';
-import { useGetIsLoggedIn } from '@elrondnetwork/dapp-core/hooks';
-import { logout } from '@elrondnetwork/dapp-core/utils';
-import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChartSimple,
+  faFileSignature
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useGetIsLoggedIn } from '@multiversx/sdk-dapp/hooks';
+import { logout } from '@multiversx/sdk-dapp/utils';
 import { Navbar as BsNavbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { dAppName } from 'config';
 import { routeNames } from 'routes';
-import { ReactComponent as MultiversXLogo } from './../../../assets/img/logo.svg';
+import { ReactComponent as MultiversXLogo } from '../../../assets/img/multiversx.svg';
 
 export const Navbar = () => {
   const isLoggedIn = useGetIsLoggedIn();
@@ -34,6 +37,14 @@ export const Navbar = () => {
                 <Link to={routeNames.statistics} className='nav-link'>
                   <FontAwesomeIcon
                     icon={faChartSimple}
+                    className='text-muted'
+                  />
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link to={routeNames.signMessage} className='nav-link'>
+                  <FontAwesomeIcon
+                    icon={faFileSignature}
                     className='text-muted'
                   />
                 </Link>

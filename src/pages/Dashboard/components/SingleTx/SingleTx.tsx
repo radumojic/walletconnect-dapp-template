@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { useGetAccountInfo } from '@elrondnetwork/dapp-core/hooks/account/useGetAccountInfo';
-import { sendTransactions } from '@elrondnetwork/dapp-core/services';
-import { refreshAccount } from '@elrondnetwork/dapp-core/utils';
 import { faCube } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks/account/useGetAccountInfo';
+import { sendTransactions } from '@multiversx/sdk-dapp/services';
+import { refreshAccount } from '@multiversx/sdk-dapp/utils';
 
 export const SingleTx = () => {
   const account = useGetAccountInfo();

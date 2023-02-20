@@ -6,12 +6,13 @@ export const Footer = () => {
     <footer className='text-center mt-2 mb-3'>
       <div>
         <a
-          rel='noopener noreferrer nofollow'
-          target='_blank'
+          {...{
+            target: '_blank'
+          }}
           className='d-flex align-items-center'
           href='https://multiversx.com/'
         >
-          Made with <HeartIcon className='mx-1' /> by MultiversX Team.
+          Made with <HeartIcon className='mx-1' /> by MultiversX Network.
         </a>
       </div>
     </footer>

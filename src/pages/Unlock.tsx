@@ -3,8 +3,9 @@ import {
   ExtensionLoginButton,
   WebWalletLoginButton,
   LedgerLoginButton,
-  WalletConnectLoginButton
-} from '@elrondnetwork/dapp-core/UI';
+  WalletConnectLoginButton,
+  OperaWalletLoginButton
+} from '@multiversx/sdk-dapp/UI';
 import { AuthRedirectWrapper } from 'components';
 import { walletConnectV2ProjectId } from 'config';
 import { routeNames } from 'routes';
@@ -25,6 +26,11 @@ const UnlockPage = () => {
 
             <ExtensionLoginButton
               loginButtonText='Extension'
+              {...commonProps}
+            />
+
+            <OperaWalletLoginButton
+              loginButtonText='Opera Crypto Wallet - Beta'
               {...commonProps}
             />
 

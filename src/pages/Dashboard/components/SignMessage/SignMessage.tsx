@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { refreshAccount } from '@elrondnetwork/dapp-core/utils';
-import { signMessage } from '@elrondnetwork/dapp-core/utils/account/signMessage';
 import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { refreshAccount } from '@multiversx/sdk-dapp/utils';
+import { signMessage } from '@multiversx/sdk-dapp/utils/account/signMessage';
 
 export const SignMessage = () => {
   const handleSignMessage = async () => {
