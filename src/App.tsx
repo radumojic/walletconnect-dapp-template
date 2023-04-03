@@ -37,8 +37,8 @@ export const App = () => {
               name: 'customConfig',
               apiTimeout,
               walletConnectV2ProjectId,
-              walletConnectV2RelayAddresses,
-              walletConnectDeepLink,
+              // walletConnectV2RelayAddresses,
+              // walletConnectDeepLink,
               walletConnectV2Options: { logger: 'debug' }
             }}
           >
