@@ -12,7 +12,7 @@ import {
 } from 'components';
 import {
   apiTimeout,
-  // walletConnectV2ProjectId,
+  //walletConnectV2ProjectId,
   sampleAuthenticatedDomains
 } from 'config';
 import { PageNotFound, Unlock } from 'pages';
