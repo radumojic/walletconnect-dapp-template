@@ -10,11 +10,7 @@ import {
   NotificationModal,
   SignTransactionsModals
 } from 'components';
-import {
-  apiTimeout,
-  //walletConnectV2ProjectId,
-  sampleAuthenticatedDomains
-} from 'config';
+import { apiTimeout, sampleAuthenticatedDomains } from 'config';
 import { PageNotFound, Unlock } from 'pages';
 import { routeNames } from 'routes';
 import { routes } from 'routes';
@@ -37,8 +33,8 @@ export const App = () => {
               name: 'customConfig',
               apiTimeout,
               walletConnectV2ProjectId,
-              // walletConnectV2RelayAddresses,
-              // walletConnectDeepLink,
+              walletConnectV2RelayAddresses,
+              walletConnectDeepLink,
               walletConnectV2Options: { logger: 'debug' }
             }}
           >
