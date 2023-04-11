@@ -10,9 +10,16 @@ import {
 import { routeNames } from 'routes';
 
 const UnlockPage = () => {
+  const hasNativeAuth =
+    process.env.REACT_APP_NATIVE_AUTH !== undefined
+      ? process.env.REACT_APP_NATIVE_AUTH === 'true'
+      : true;
+  const loginToken = process.env.REACT_APP_LOGIN_TOKEN ?? '';
+
   const commonProps = {
     callbackRoute: routeNames.dashboard,
-    nativeAuth: true // optional
+    ...(hasNativeAuth ? { nativeAuth: true } : {}),
+    ...(loginToken ? { token: loginToken } : {})
   };
 
   return (
