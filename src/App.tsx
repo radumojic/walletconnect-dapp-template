@@ -37,6 +37,7 @@ export const App = () => {
               walletConnectDeepLink,
               walletConnectV2Options: { logger: 'debug' }
             }}
+            dappConfig={{ shouldUseWebViewProvider: true }}
           >
             <Layout>
               <AxiosInterceptorContext.Listener />
