@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './../dashboard.module.scss';
 import { Actions } from './Actions';
+import { BalanceTx } from './BalanceTx';
 import { MultipleTx } from './MultipleTx';
 import { SignMessage } from './SignMessage';
 import { SingleTx } from './SingleTx';
@@ -18,6 +19,7 @@ export const DashboardLayout = ({ children }: React.PropsWithChildren) => {
                 <div className='card-body text-center p-4'>
                   <TopInfo />
                   <div className='d-flex align-items-center justify-content-center'>
+                    <BalanceTx />
                     <SingleTx />
                     <MultipleTx />
                     <SignMessage />
