@@ -123,7 +123,12 @@ export const Actions = () => {
       {hasPing !== undefined && (
         <>
           {hasPing && !hasPendingTransactions ? (
-            <div className='action-btn' onClick={sendPingTransaction}>
+            <div
+              className='action-btn'
+              onClick={sendPingTransaction}
+              data-testid='btnPing'
+              data-cy='transactionBtn'
+            >
               <button className='btn'>
                 <FontAwesomeIcon icon={faArrowUp} className='text-primary' />
               </button>
@@ -139,6 +144,8 @@ export const Actions = () => {
                     className: `action-btn ${notAllowedClass}`,
                     ...(pongAllowed ? { onClick: sendPongTransaction } : {})
                   }}
+                  data-testid='btnPong'
+                  data-cy='transactionBtn'
                 >
                   <button className={`btn ${notAllowedClass}`}>
                     <FontAwesomeIcon
