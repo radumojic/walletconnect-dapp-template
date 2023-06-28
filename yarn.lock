@@ -1853,10 +1853,10 @@
     keccak "3.0.2"
     protobufjs "6.11.3"
 
-"@multiversx/sdk-dapp@2.14.0-alpha.7":
-  version "2.14.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/@multiversx/sdk-dapp/-/sdk-dapp-2.14.0-alpha.7.tgz#c5285ead2d73e76dbd0952cecaa54dd473a3e429"
-  integrity sha512-E3BPEnYFc9FnQjG8OsXmQ/k0sC2y4ioH9eXG/01/5DGIwWq3l77QO0//P6CKa2MOtBOlKT+Y2MhFbRwUNseWQQ==
+"@multiversx/sdk-dapp@2.14.0-alpha.8":
+  version "2.14.0-alpha.8"
+  resolved "https://registry.yarnpkg.com/@multiversx/sdk-dapp/-/sdk-dapp-2.14.0-alpha.8.tgz#c68bbb107e41a28126e265d0ebdc534c8087d62f"
+  integrity sha512-FXOKmW+JNBiGHrxxkMEfbNbxN6igFr1HmlbqKw7xrluWRIrIFmUrcGdjLlOB+NnLA/Z29v3c7b2XS0ghRHU3jw==
   dependencies:
     "@multiversx/sdk-core" "12.4.2"
     "@multiversx/sdk-extension-provider" "3.0.0-alpha.1"
@@ -1865,7 +1865,7 @@
     "@multiversx/sdk-network-providers" "1.4.0"
     "@multiversx/sdk-opera-provider" "1.0.0-alpha.1"
     "@multiversx/sdk-wallet" "4.0.0"
-    "@multiversx/sdk-wallet-connect-provider" "4.0.0-alpha.7"
+    "@multiversx/sdk-wallet-connect-provider" "4.0.0-alpha.6"
     "@multiversx/sdk-web-wallet-provider" "2.4.0"
     "@reduxjs/toolkit" "1.8.2"
     axios "0.24.0"
@@ -1942,10 +1942,10 @@
   dependencies:
     bech32 "^2.0.0"
 
-"@multiversx/sdk-wallet-connect-provider@4.0.0-alpha.7":
-  version "4.0.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/@multiversx/sdk-wallet-connect-provider/-/sdk-wallet-connect-provider-4.0.0-alpha.7.tgz#7a9d459795f8dd1f48431bfce138395977ebbbc9"
-  integrity sha512-Sc00pd4H/Uj9EIR78gv/ZtVQUSUf1eCyfWPlYx/vfgmy0okQaWtZCi00rJY9LqO/uy+EfBSTo9RDeyx1O5ZpZA==
+"@multiversx/sdk-wallet-connect-provider@4.0.0-alpha.6":
+  version "4.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@multiversx/sdk-wallet-connect-provider/-/sdk-wallet-connect-provider-4.0.0-alpha.6.tgz#b957bcef39a219da4e7a000e0b688f5a04035bf5"
+  integrity sha512-b0CbaEkrBRnC3FURkpAMCc3K2UK3sxy+tSEh3qEAb9HB5u8JNTcRryXhFq2GY2+SDuQmzbkl/5SvZUI3xUgDvg==
   dependencies:
     "@walletconnect/sign-client" "2.8.4"
     "@walletconnect/utils" "2.8.4"
