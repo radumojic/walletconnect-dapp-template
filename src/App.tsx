@@ -36,15 +36,7 @@ export const App = () => {
               walletConnectV2RelayAddresses,
               walletConnectDeepLink,
               walletConnectV2Options: {
-                logger: 'debug',
-                metadata: {
-                  name: 'Scammy McScammaman',
-                  description: 'Scam description',
-                  url: 'https://www.scamdoc.com/',
-                  icons: [
-                    'https://a.pinatafarm.com/599x416/e877f6fcba/crying-cat.jpg'
-                  ]
-                }
+                logger: 'debug'
               }
             }}
             dappConfig={{ shouldUseWebViewProvider: true }}
