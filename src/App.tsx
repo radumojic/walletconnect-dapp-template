@@ -8,7 +8,8 @@ import {
 import {
   TransactionsToastList,
   NotificationModal,
-  SignTransactionsModals
+  SignTransactionsModals,
+  IdleTimer
 } from 'components';
 import { apiTimeout, sampleAuthenticatedDomains } from 'config';
 import { PageNotFound, Unlock } from 'pages';
@@ -28,7 +29,7 @@ export const App = () => {
       >
         <Router>
           <DappProvider
-            environment={EnvironmentsEnum.mainnet}
+            environment={EnvironmentsEnum.devnet}
             customNetworkConfig={{
               name: 'customConfig',
               apiTimeout,
@@ -41,6 +42,7 @@ export const App = () => {
             }}
             dappConfig={{ shouldUseWebViewProvider: true }}
           >
+            <IdleTimer />
             <Layout>
               <AxiosInterceptorContext.Listener />
               <TransactionsToastList />
