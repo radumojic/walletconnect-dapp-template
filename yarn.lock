@@ -1828,10 +1828,10 @@
     keccak "3.0.2"
     protobufjs "7.2.4"
 
-"@multiversx/sdk-dapp@2.19.8":
-  version "2.19.8"
-  resolved "https://registry.yarnpkg.com/@multiversx/sdk-dapp/-/sdk-dapp-2.19.8.tgz#4af8e7009323bcb60c51f985c3b8c26534bd85ec"
-  integrity sha512-ZKD9/78ltx59J6DqN30cBwvN8uGf3XTdJHDCjAx6jA58vqbsyfCwKDgub4mr76VG+pedSQl4w8viN5shK0SyiA==
+"@multiversx/sdk-dapp@2.19.4":
+  version "2.19.4"
+  resolved "https://registry.yarnpkg.com/@multiversx/sdk-dapp/-/sdk-dapp-2.19.4.tgz#8d4a43995a346ee09d5c2a15c374a04c95f4ac95"
+  integrity sha512-v9si08n/hGAdqkTzy6Mkjk6UyjY8PevWElwoRKvv2fw/WcUkY/tuUa5EFnilBJ4nuu8fUMeZGFxUJ73T2onSxw==
   dependencies:
     "@multiversx/sdk-core" "12.6.0"
     "@multiversx/sdk-extension-provider" "3.0.0"
@@ -1841,7 +1841,7 @@
     "@multiversx/sdk-opera-provider" "1.0.0-alpha.1"
     "@multiversx/sdk-wallet" "4.2.0"
     "@multiversx/sdk-wallet-connect-provider" "4.0.3"
-    "@multiversx/sdk-web-wallet-provider" "3.1.0"
+    "@multiversx/sdk-web-wallet-provider" "3.0.0"
     "@reduxjs/toolkit" "1.8.2"
     axios "0.24.0"
     bignumber.js "9.x"
@@ -1955,10 +1955,10 @@
     tweetnacl "1.0.3"
     uuid "8.3.2"
 
-"@multiversx/sdk-web-wallet-provider@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@multiversx/sdk-web-wallet-provider/-/sdk-web-wallet-provider-3.1.0.tgz#af6f7e56ff05cd429c677654638dddbcaed1473b"
-  integrity sha512-gIE7AudJl5Ax64AMAD0o6m0cVi+dI5LW2TSM5M9K7zKMWWCflhv27a2A61JkCIQ6CK5OTIkMXaFb61OzUqhplQ==
+"@multiversx/sdk-web-wallet-provider@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@multiversx/sdk-web-wallet-provider/-/sdk-web-wallet-provider-3.0.0.tgz#ed01e707a1d0216428d79b2deac96f88858252c5"
+  integrity sha512-JzyOJJKx+vr1kMRHwVx6Y/SBSo/yUeWAHPeUJtvmjyRrTEhniYUhuKgy6U8lkD4djLKf8G/qpUOXwvfu4fbXuw==
   dependencies:
     qs "6.10.3"
 
