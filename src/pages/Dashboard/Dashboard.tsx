@@ -4,7 +4,7 @@ import { faBan, faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
 import { AxiosError } from 'axios';
 import { Loader, PageState, TransactionsTable } from 'components';
 
-import { apiTimeout, contractAddress, transactionSize } from 'config';
+import { apiTimeout, transactionSize } from 'config';
 import { getTransactions } from 'helpers';
 import {
   useGetAccount,
@@ -31,8 +31,7 @@ const DashboardPage = () => {
       const { data } = await getTransactions({
         apiAddress,
         sender: address,
-        receiver: contractAddress,
-        condition: 'must',
+        receiver: address,
         transactionSize,
         apiTimeout
       });
