@@ -38,7 +38,10 @@ export const App = () => {
               walletConnectDeepLink,
               walletConnectV2Options: {
                 logger: 'debug'
-              }
+              },
+              walletAddress: 'https://devnet2-wallet.multiversx.com',
+              apiAddress: 'https://devnet2-api.multiversx.com',
+              explorerAddress: 'http://devnet2-explorer.multiversx.com'
             }}
             dappConfig={{ shouldUseWebViewProvider: true }}
           >
